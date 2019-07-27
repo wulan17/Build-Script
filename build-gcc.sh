@@ -1,29 +1,25 @@
-###################
-#   Evolution-X   #
-###################
-
 # Set defaults
 wd=$(pwd)
 out=$wd/out
-BUILD="/home/thehitman/android/kernel/rebase"
+BUILD="/home/galihgustip/lol"
 # Set kernel source workspace
 cd $BUILD
 # Export ARCH <arm, arm64, x86, x86_64>
-export ARCH=arm64
+export ARCH=arm
 # Export SUBARCH <arm, arm64, x86, x86_64>
-export SUBARCH=arm64
+export SUBARCH=arm
 # Set kernal name
-export LOCALVERSION=Evolution-X
+export LOCALVERSION=-wulan17
 # Export Username
-export KBUILD_BUILD_USER=TheHitMan
+export KBUILD_BUILD_USER=wulan17
 # Export Machine name
-export KBUILD_BUILD_HOST=CINNAMON
+export KBUILD_BUILD_HOST=CactusOrg
 # Compiler String
-export CROSS_COMPILE=/home/thehitman/Android-Kernel/kernel/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+export CROSS_COMPILE=/home/galihgustip/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 # Make and Clean
 make clean
 make mrproper
 # Make <defconfig>
-make O=$out ARCH=arm64 mido_defconfig
+make O=$out ARCH=arm cactus_defconfig
 # Build Kernel
-make O=$out ARCH=arm64 -j4
+make O=$out ARCH=arm -j4
